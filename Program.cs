@@ -47,7 +47,6 @@ namespace dcit318_assignment3_11121058
                         break;
 
                     case "4":
-                        Console.WriteLine(">>> Entered Q4 flow...");
                         try
                         {
                             var processor = new StudentResultProcessor();
@@ -76,9 +75,22 @@ namespace dcit318_assignment3_11121058
                         break;
 
                     case "5":
-                        Console.WriteLine("\n[Q5 not implemented yet]");
-                        Pause();
+                        Console.Clear();
+                        Console.WriteLine("=== INVENTORY RECORDS SYSTEM ===\n");
+
+                        var inventoryApp = new dcit318_assignment3_11121058.Q5_InventoryRecordsSystem.InventoryApp();
+                        inventoryApp.SeedSampleData();
+                        inventoryApp.SaveData();
+
+                        Console.WriteLine("\n--- Simulating new session ---\n");
+                        inventoryApp.LoadData();
+                        inventoryApp.PrintAllItems();
+
+                        Console.WriteLine("\nPress any key to return to menu...");
+                        Console.ReadKey();
                         break;
+
+
 
                     case "0":
                         exit = true;
