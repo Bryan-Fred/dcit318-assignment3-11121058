@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using dcit318_assignment3_11121058.Q1_FinanceManagement;
+using dcit318_assignment3_11121058.Q4_GradingSystem; // ✅ Added for Q4 classes
 
 namespace dcit318_assignment3_11121058
 {
@@ -7,9 +9,7 @@ namespace dcit318_assignment3_11121058
     {
         static void Main(string[] args)
         {
-            // Ensure console can display UTF-8 characters if needed
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-
             bool exit = false;
 
             while (!exit)
@@ -46,10 +46,33 @@ namespace dcit318_assignment3_11121058
                         wh.Run();
                         break;
 
-
                     case "4":
-                        Console.WriteLine("\n[Q4 not implemented yet]");
-                        Pause();
+                        Console.WriteLine(">>> Entered Q4 flow...");
+                        try
+                        {
+                            var processor = new StudentResultProcessor();
+                            var result = processor.ReadStudentsFromFile("students.txt");
+
+                            // Display errors
+                            foreach (var error in result.errors)
+                            {
+                                Console.WriteLine($"❌ {error}");
+                            }
+
+                            // Write the valid report
+                            processor.WriteReportToFile(result.validStudents, "StudentReport.txt");
+                            Console.WriteLine($"\n✅ Report written to StudentReport.txt with {result.validStudents.Count} valid records.");
+                        }
+                        catch (FileNotFoundException ex)
+                        {
+                            Console.WriteLine($"❌ File error: {ex.Message}");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"❌ Unexpected error: {ex.Message}");
+                        }
+                        Console.WriteLine("Press any key to return to menu...");
+                        Console.ReadKey();
                         break;
 
                     case "5":

@@ -1,0 +1,6 @@
+Frederick Ofori (ID: 101): Score = 84, Grade = A
+Sam Altman (ID: 102): Score = 75, Grade = B
+Wanda Bell (ID: 103): Score = 62, Grade = C
+Tormmund GiantsBane (ID: 104): Score = 45, Grade = F
+InvalidScore (ID: 105): Score = 55, Grade = D
+Incomplete Student (ID: 106): Score = 60, Grade = C

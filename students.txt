@@ -1,0 +1,6 @@
+101,Frederick Ofori,84
+102,Sam Altman,75
+103,Wanda Bell,62
+104,Tormmund GiantsBane,45
+105,InvalidScore,55
+106,Incomplete Student,60
