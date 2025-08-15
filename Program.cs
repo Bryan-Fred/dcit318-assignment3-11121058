@@ -42,9 +42,10 @@ namespace dcit318_assignment3_11121058
                         break;
 
                     case "3":
-                        Console.WriteLine("\n[Q3 not implemented yet]");
-                        Pause();
+                        var wh = new dcit318_assignment3_11121058.Q3_WarehouseInventory.WareHouseManager();
+                        wh.Run();
                         break;
+
 
                     case "4":
                         Console.WriteLine("\n[Q4 not implemented yet]");
