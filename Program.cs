@@ -37,8 +37,8 @@ namespace dcit318_assignment3_11121058
                         break;
 
                     case "2":
-                        Console.WriteLine("\n[Q2 not implemented yet]");
-                        Pause();
+                        var healthApp = new dcit318_assignment3_11121058.Q2_HealthcareSystem.HealthSystemApp();
+                        healthApp.Run();
                         break;
 
                     case "3":
